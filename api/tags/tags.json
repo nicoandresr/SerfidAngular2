@@ -1,0 +1,22 @@
+[         
+    {
+        "tagId": 1,
+        "device": "Laptop HP 1290",
+        "tag": "lstt-0095-xr",
+        "detail": "Sales laptop",
+        "registerDate": "March 18, 2015",
+        "price": 950000,
+        "rating": 2.5,
+        "imageUrl": "http://ventadepcs.com/tienda/image/cache/data/computadora/portatil/laptop-economica-marca-hp-blanca-500x500.JPG"
+    },
+    {
+        "tagId": 2,
+        "device": "Video Beam Sony",
+        "tag": "abtx-3567-wt",
+        "detail": "Learning VideoBeam",
+        "registerDate": "May 21, 2015",
+        "price": 1500000,
+        "rating": 4.7,
+        "imageUrl": "http://www.computadoresbogota.com/articulos/activos/imagenes/Sony_VPL-EX272.jpg"
+    }
+]
