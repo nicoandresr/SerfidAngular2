@@ -17,7 +17,8 @@ import { TagDetailComponent } from './tags/tag-detail.component';
                 <a class='navbar-brand'>{{pageTitle}}</a>
                 <ul class='nav navbar-nav'>
                     <li><a [routerLink]="['Welcome']">Home</a></li>
-                    <li><a [routerLink]="['Tags']">Tag List</a></li>
+                    <li><a [routerLink]="['Tags']">Device list</a></li>
+                    <li><a [routerLink]="['Tags']">Register device</a></li>
                 </ul>
             </div>
         </nav>
@@ -38,5 +39,5 @@ import { TagDetailComponent } from './tags/tag-detail.component';
     { path: '/tag/:id', name: 'TagDetail', component: TagDetailComponent }
 ])
 export class AppComponent {
-    pageTitle: string = 'Tags Library'; 
+    pageTitle: string = 'SERFID'; 
 }

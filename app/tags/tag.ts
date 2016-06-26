@@ -1,7 +1,7 @@
 export interface ITag {
-    tagId: Number;
-    device: string;
     tag: string;
+    device: string;
+    displayName: string;
     detail: string;
     registerDate: string;
     price: number;

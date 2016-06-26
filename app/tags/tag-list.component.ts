@@ -14,7 +14,7 @@ import { TagService } from './tag.service'
 })
 
 export class TagListComponent implements OnInit {
-    pageTitle: string = 'Tags List';
+    pageTitle: string = 'Device List';
     imageWidth: number = 50;
     imageMargin: number = 2;
     showImage: boolean = false;

@@ -27,10 +27,10 @@
                             </button>
                         </th>
                         <th>Device</th>
-                        <th>Tag</th>
                         <th>Register date</th>
-                        <th>Price</th>
-                        <th>Rating</th>
+                        <th>Device Value</th>
+                        <th>Importance</th>
+                        <th>Tag</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -47,7 +47,6 @@
                                 {{tag.device}}
                             </a>
                         </td>
-                        <td>{{tag.tag | lowercase}}</td>
                         <td>{{tag.registerDate}}</td>
                         <td>{{tag.price | currency: 'USD' :true:'1.0' | lowercase}}</td>
                         <td>
@@ -55,6 +54,7 @@
                                 (ratingClicked)='onRatingClicked($event)'>
                             </ai-star>
                         </td>
+                        <td>{{tag.tag | uppercase}}</td>
                     </tr>
                 </tbody>
             </table>

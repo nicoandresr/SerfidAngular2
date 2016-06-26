@@ -1,8 +1,7 @@
 [         
     {
-        "tagId": 1,
         "device": "Laptop HP 1290",
-        "tag": "lstt-0095-xr",
+        "tag": "916E8B",
         "detail": "Sales laptop",
         "registerDate": "March 18, 2015",
         "price": 950000,
@@ -10,9 +9,8 @@
         "imageUrl": "http://ventadepcs.com/tienda/image/cache/data/computadora/portatil/laptop-economica-marca-hp-blanca-500x500.JPG"
     },
     {
-        "tagId": 2,
         "device": "Video Beam Sony",
-        "tag": "abtx-3567-wt",
+        "tag": "569FYY",
         "detail": "Learning VideoBeam",
         "registerDate": "May 21, 2015",
         "price": 1500000,
