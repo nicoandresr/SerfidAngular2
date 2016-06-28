@@ -20,7 +20,7 @@ export class TagRegisterComponent{
         console.log('device saved: ' + JSON.stringify(this.device));
     }
 
-    onBack(): void {
+    onGoToList(): void {
         this._router.navigate(['Tags']);
     }
 }
