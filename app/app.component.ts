@@ -4,6 +4,7 @@ import { ROUTER_PROVIDERS, RouteConfig, ROUTER_DIRECTIVES } from 'angular2/route
 import 'rxjs/Rx'; // Load all features
 
 import { TagListComponent } from './tags/tag-list.component';
+import { TagRegisterComponent } from './tags/tag-register.component';
 import { WelcomeComponent } from './home/welcome.component';
 import { TagService } from './tags/tag.service'
 import { TagDetailComponent } from './tags/tag-detail.component';
@@ -18,7 +19,7 @@ import { TagDetailComponent } from './tags/tag-detail.component';
                 <ul class='nav navbar-nav'>
                     <li><a [routerLink]="['Welcome']">Home</a></li>
                     <li><a [routerLink]="['Tags']">Device list</a></li>
-                    <li><a [routerLink]="['Tags']">Register device</a></li>
+                    <li><a [routerLink]="['Register']">Register device</a></li>
                 </ul>
             </div>
         </nav>
@@ -36,6 +37,7 @@ import { TagDetailComponent } from './tags/tag-detail.component';
 @RouteConfig([
     { path: '/welcome', name: 'Welcome', component: WelcomeComponent, useAsDefault: true },
     { path: '/tags', name: 'Tags', component: TagListComponent },
+    { path: '/tag/register', name: 'Register', component: TagRegisterComponent },
     { path: '/tag/:id', name: 'TagDetail', component: TagDetailComponent }
 ])
 export class AppComponent {
