@@ -3,8 +3,10 @@
         {{pageTitle}}
     </div>
     <div class="panel-footer">
-        <a class="btn btn-default" (click)='onSave()' style="width:80px">
-            <i class="glyphicon glyphicon-save"></i> Save
-        </a>
+        <form [ngFormModel]="registerTag" (submit)="doRegister($event)" >            
+            <a class="btn btn-default" (click)='onSave()' style="width:80px">
+                <i class="glyphicon glyphicon-save"></i> Save
+            </a>
+        </form>
     </div>
 </div>
