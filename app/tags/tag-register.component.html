@@ -6,6 +6,7 @@
         <form [ngFormModel]="registerTag" (submit)="doRegister($event)" >
 	    <input ngControl="tag" type="text" placeholder="tag identifier"/>
 	    <input ngControl="device" type="text" placeholder="device identifier"/>
+	    <input ngControl="displayName" type="text" placeholder="device name"/>
             <a class="btn btn-default" (click)='onSave()' style="width:80px">
                 <i class="glyphicon glyphicon-save"></i> Save
             </a>
