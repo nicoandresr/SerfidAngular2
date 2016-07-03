@@ -4,16 +4,19 @@
     </div>
     <div class="panel-footer">
         <form [ngFormModel]="registerTag" (submit)="doRegister($event)" >
-	    <input ngControl="tag" type="text" placeholder="tag identifier"/>
+	    <div class="form-group">
+		<label for="tagInput">Tag</label>
+		<input ngControl="tag" type="text" placeholder="tag identifier" id="tagInput"/>
+	    </div>
 	    <input ngControl="device" type="text" placeholder="device identifier"/>
 	    <input ngControl="displayName" type="text" placeholder="device name"/>
 	    <input ngControl="detail" type="text" placeholder="details"/>
 	    <input ngControl="price" type="number" placeholder="price of device"/>
 	    <input ngControl="rating" type="number" placeholder="rating of device"/>
 	    <input ngControl="imageUrl" type="text" placeholder="image url"/>
-            <a class="btn btn-default" (click)='onSave()' style="width:80px">
+	    <button type="submit" class="btn btn-primary" style="width:80px">
                 <i class="glyphicon glyphicon-save"></i> Save
-            </a>
+	    </button>
         </form>
     </div>
 </div>
