@@ -2,7 +2,7 @@
     <div class="panel-heading">
         {{pageTitle}}
     </div>
-    <div class="panel-footer">
+    <div class="panel-body" style="max-width: 400px;">
         <form [ngFormModel]="registerTag" (submit)="doRegister($event)" >
 	    <div class="form-group">
 		<label for="tagInput">Tag</label>
@@ -38,5 +38,8 @@
 	        </button>
 	    </div>
         </form>
+    </div>
+    <div class="panel-footer">
+
     </div>
 </div>
