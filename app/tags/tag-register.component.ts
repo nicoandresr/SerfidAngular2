@@ -1,4 +1,5 @@
 import { Component } from 'angular2/core'
+import { FormBuilder, Validators } from 'angular2/common';
 import { Router } from 'angular2/router';
 import { TagService } from './tag.service'
 import { ITag } from './tag';
@@ -14,13 +15,21 @@ export class TagRegisterComponent{
     device: ITag
 
     constructor(private _tagService: TagService,
-                private _router: Router){ }
+                private _router: Router
+		private _fb: FormBuilder) {
+		this.registerForm = this._fb.group({
+			tag: ['', Validators.required],
+			device: [''],
+			displayName: [''],
+			detail: [''],
+			price: [0],
+			rating: [0],
+			imageUrl: [''] 
+		});
+	}
 
-    onSave(): void{
-        console.log('device saved: ' + JSON.stringify(this.device));
-    }
-
-    onGoToList(): void {
-        this._router.navigate(['Tags']);
+    doRegister(event): void {
+	console.log(this.registerForm.value);
+        event.preventDefault();
     }
 }
