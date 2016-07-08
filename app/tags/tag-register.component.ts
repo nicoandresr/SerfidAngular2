@@ -29,7 +29,17 @@ export class TagRegisterComponent{
 	}
 
     doRegister(event): void {
-	console.log(this.registerForm.value);
+	this.device = new {
+		tag: this.registerForm.tag,
+		device: this.registerForm.device,
+		displayName: this.registerForm.displayName,
+		detail: this.registerForm.detai,
+		registerDate: this.registerForm.registerDate,
+		price: this.registerForm.price,
+		rating: this.registerForm.rating,
+		imageUrl: this.registerForm.imageUrl
+	};
+	console.log(this.device);
         event.preventDefault();
     }
 }
