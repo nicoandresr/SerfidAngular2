@@ -2,7 +2,7 @@ import { Component } from 'angular2/core'
 import { FormBuilder, Validators } from 'angular2/common';
 import { Router } from 'angular2/router';
 import { TagService } from './tag.service'
-import { ITag } from './tag';
+import { Device } from './device';
 
 @Component({
     selector: 'pm-register',
@@ -11,35 +11,17 @@ import { ITag } from './tag';
 })
 export class TagRegisterComponent{
 
-    pageTitle: string = 'Register an new device';
-    device: ITag
+    public pageTitle: string = 'Register an new device';
+    public device: Device; 
 
     constructor(private _tagService: TagService,
-                private _router: Router
-		private _fb: FormBuilder) {
-		this.registerForm = this._fb.group({
-			tag: ['', Validators.required],
-			device: [''],
-			displayName: [''],
-			detail: [''],
-			price: [0],
-			rating: [0],
-			imageUrl: [''] 
-		});
-	}
+        private _router: Router,
+        private _fb: FormBuilder) {
+        this.device = new Device();
+    }
 
-    doRegister(event): void {
-	this.device = new {
-		tag: this.registerForm.tag,
-		device: this.registerForm.device,
-		displayName: this.registerForm.displayName,
-		detail: this.registerForm.detai,
-		registerDate: this.registerForm.registerDate,
-		price: this.registerForm.price,
-		rating: this.registerForm.rating,
-		imageUrl: this.registerForm.imageUrl
-	};
-	console.log(this.device);
+    public doRegister(event): void {
+        console.log(this.device);
         event.preventDefault();
     }
 }
