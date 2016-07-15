@@ -1,4 +1,4 @@
-export class Device {
+export class Tag {
 
     tag: string;
     name: string;

@@ -6,27 +6,27 @@
         <div class="panel-body" style="max-width:500px;">
             <div class="form-group">
                 <label>Tag</label>
-                <input ngModel="device.tag" class="form-control" type="text" placeholder="tag identifier"/>
+                <input [(ngModel)]="tag.tag" class="form-control" type="text" placeholder="tag identifier"/>
             </div>
             <div class="form-group">
                 <label>Device</label>
-                <input ngModel="device.name" class="form-control" type="text" placeholder="device identifier"/>
+                <input [(ngModel)]="tag.name" class="form-control" type="text" placeholder="device identifier"/>
             </div>
             <div class="form-group">
                 <label>Detail</label>
-                <input ngModel="device.detail" class="form-control" type="text" placeholder="details"/>
+                <input [(ngModel)]="tag.detail" class="form-control" type="text" placeholder="details"/>
             </div>
             <div class="form-group">
                 <label>Price</label>
-                <input ngModel="device.price" class="form-control" type="number" placeholder="price of device"/>
+                <input [(ngModel)]="tag.price" class="form-control" type="number" placeholder="price of device"/>
             </div>
             <div class="form-group">
                 <label>Rating</label>
-                <input ngModel="device.rating" class="form-control" type="number" placeholder="rating of device"/>
+                <input [(ngModel)]="tag.rating" class="form-control" type="number" placeholder="rating of device"/>
             </div>
             <div class="form-group">
                 <label>Image url</label>
-                <input ngModel="device.imageUrl" class="form-control" type="text" placeholder="image url"/>
+                <input [(ngModel)]="tag.imageUrl" class="form-control" type="text" placeholder="image url"/>
             </div>
         </div>
         <div class="panel-footer">

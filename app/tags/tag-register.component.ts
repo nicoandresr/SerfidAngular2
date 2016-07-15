@@ -2,7 +2,7 @@ import { Component } from 'angular2/core'
 import { FormBuilder, Validators } from 'angular2/common';
 import { Router } from 'angular2/router';
 import { TagService } from './tag.service'
-import { Device } from './device';
+import { Tag } from './tag';
 
 @Component({
     selector: 'pm-register',
@@ -12,16 +12,16 @@ import { Device } from './device';
 export class TagRegisterComponent{
 
     public pageTitle: string = 'Register an new device';
-    public device: Device; 
+    public tag: Tag; 
 
     constructor(private _tagService: TagService,
         private _router: Router,
         private _fb: FormBuilder) {
-        this.device = new Device();
+        this.tag  = new Tag();
     }
 
     public doRegister(event): void {
-        console.log(this.device);
+        console.log(this.tag);
         event.preventDefault();
     }
 }
