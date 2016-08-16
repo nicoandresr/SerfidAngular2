@@ -8,7 +8,7 @@
     "npm": "3.3.12"
   },
   "scripts": {
-    "start": "npm run tsc",
+    "start": "concurrently \"npm run tsc\" \"node index.js\" ",
     "run": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
@@ -18,15 +18,17 @@
   "dependencies": {
     "angular2": "2.0.0-beta.15",
     "bootstrap": "^3.3.6",
+    "concurrently": "^2.0.0",
+    "ejs": "^2.5.1",
     "es6-shim": "^0.35.0",
+    "express": "^4.14.0",
+    "lite-server": "^2.2.0",
     "reflect-metadata": "0.1.2",
     "rxjs": "5.0.0-beta.2",
     "systemjs": "0.19.26",
-    "zone.js": "0.6.10",
-    "concurrently": "^2.0.0",
-    "lite-server": "^2.2.0",
     "typescript": "^1.8.10",
-    "typings": "^0.7.12"
+    "typings": "^0.7.12",
+    "zone.js": "0.6.10"
   },
   "repository": {}
 }
