@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "concurrently \"npm run tsc\" \"node index.js\" ",
-    "run": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "dev": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server"
