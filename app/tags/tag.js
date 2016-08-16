@@ -8,7 +8,7 @@ System.register([], function(exports_1, context_1) {
             Tag = (function () {
                 function Tag() {
                     this.tag = "";
-                    this.name = "";
+                    this.device = "";
                     this.detail = "";
                     this.registerDate = "";
                     this.price = 0;

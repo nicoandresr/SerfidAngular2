@@ -24,7 +24,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 TagFilterPipe.prototype.transform = function (value, args) {
                     var filter = args[0] ? args[0].toLocaleLowerCase() : null;
                     return filter ? value.filter(function (tag) {
-                        return tag.name.toLocaleLowerCase().indexOf(filter) != -1;
+                        return tag.device.toLocaleLowerCase().indexOf(filter) != -1;
                     }) : value;
                 };
                 TagFilterPipe = __decorate([

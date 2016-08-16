@@ -32,7 +32,6 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/Observable'], function(
                 TagService.prototype.getTags = function () {
                     return this._http.get(this._tagUrl)
                         .map(function (response) { return response.json(); })
-                        .do(function (data) { return console.log("All: " + JSON.stringify(data)); })
                         .catch(this.handleError);
                 };
                 TagService.prototype.handleError = function (error) {

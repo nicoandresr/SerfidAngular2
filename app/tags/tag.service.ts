@@ -13,7 +13,6 @@ export class TagService {
     getTags(): Observable<Tag[]>{
         return this._http.get(this._tagUrl)
             .map((response: Response) => <Tag[]>response.json())
-            .do(data => console.log("All: " + JSON.stringify(data)))
             .catch(this.handleError);
     }
 

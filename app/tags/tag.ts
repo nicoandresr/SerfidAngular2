@@ -1,7 +1,7 @@
 export class Tag {
 
     tag: string;
-    name: string;
+    device: string;
     detail: string;
     registerDate: string;
     price: number;
@@ -10,7 +10,7 @@ export class Tag {
     
     constructor() {
         this.tag = "";
-        this.name = "";
+        this.device = "";
         this.detail = "";
         this.registerDate = "";
         this.price = 0;
