@@ -8,7 +8,8 @@
     "npm": "3.3.12"
   },
   "scripts": {
-    "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "start": "npm run tsc",
+    "run": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server"
