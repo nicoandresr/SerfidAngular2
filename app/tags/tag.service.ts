@@ -1,5 +1,5 @@
 import { Injectable } from 'angular2/core'
-import { ITag } from './tag'
+import { Tag } from './tag'
 import { Http, Response } from 'angular2/http';
 import { Observable } from 'rxjs/Observable';
 
@@ -10,9 +10,9 @@ export class TagService {
 
     constructor(private _http: Http){ }
 
-    getTags(): Observable<ITag[]>{
+    getTags(): Observable<Tag[]>{
         return this._http.get(this._tagUrl)
-            .map((response: Response) => <ITag[]>response.json())
+            .map((response: Response) => <Tag[]>response.json())
             .do(data => console.log("All: " + JSON.stringify(data)))
             .catch(this.handleError);
     }

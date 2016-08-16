@@ -1,6 +1,6 @@
 import { Component, OnInit } from 'angular2/core';
 import { ROUTER_DIRECTIVES } from 'angular2/router';
-import { ITag } from './tag';
+import { Tag } from './tag';
 import { StarComponent } from '../shared/star.component'
 import { TagFilterPipe } from './tag-filter.pipe'
 import { TagService } from './tag.service'
@@ -19,7 +19,7 @@ export class TagListComponent implements OnInit {
     imageMargin: number = 2;
     showImage: boolean = false;
     listFilter: string;
-    tags: ITag[];
+    tags: Tag[];
     errorMessage: string;
 
     constructor(private _tagService: TagService){ }
