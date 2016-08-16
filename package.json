@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "author": "Deborah Kurata",
   "description": "Package for the Acme Product Management sample application",
+  "engines": {
+    "node": "5.2.0",
+    "npm": "3.3.12"
+  },
   "scripts": {
     "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "tsc": "tsc",
