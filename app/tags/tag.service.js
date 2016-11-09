@@ -27,7 +27,7 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/Observable'], function(
             TagService = (function () {
                 function TagService(_http) {
                     this._http = _http;
-                    this._tagUrl = 'api/tags/tags.json';
+                    this._tagUrl = 'http://localhost:7000/devices';
                 }
                 TagService.prototype.getTags = function () {
                     return this._http.get(this._tagUrl)
