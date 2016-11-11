@@ -7,8 +7,7 @@ import { Tag } from './tag';
 @Component({
     selector: 'pm-register',
     styleUrls: ['./app/tags/tag-register.component.css'],
-    templateUrl: './app/tags/tag-register.component.html'
-})
+    templateUrl: './app/tags/tag-register.component.html'})
 export class TagRegisterComponent{
 
     public pageTitle: string = 'Register an new device';
@@ -21,7 +20,11 @@ export class TagRegisterComponent{
     }
 
     public doRegister(event): void {
-        console.log(this.tag);
+        this._tagService.registerTag(this.tag)
+                .subscribe(
+                    result => console.log(result)
+                    error => console.log(error));
+
         event.preventDefault();
     }
 }
