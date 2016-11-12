@@ -47,7 +47,7 @@
                                 {{tag.device}}
                             </a>
                         </td>
-                        <td>{{tag.registerDate}}</td>
+                        <td>{{tag.registerDate | date:'shortDate'}}</td>
                         <td>{{tag.price | currency: 'USD' :true:'1.0' | lowercase}}</td>
                         <td>
                             <ai-star [rating]='tag.rating'
