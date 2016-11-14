@@ -9,6 +9,7 @@ export class TagService {
     private _server = 'http://localhost:7000';
     private _devices = this._server + '/devices';
     private _deviceRegister = this._server + '/deviceRegister';
+    private _deviceDelete = this._serverr + '/deviceDelete/';
 
     constructor(private _http: Http){ }
 
@@ -24,7 +25,13 @@ export class TagService {
         let data = JSON.stringify(tag);
 
         return this._http.post(this._deviceRegister, data, options)
-            .map((response: Response) => response)
+            .map(res: Response => res)
+            .catch(this.handleError);
+    }
+
+    public deleteTag(id: string): Observable<string> {
+        return this._http.delete(this._deviceDelete + id)
+            .map(res: Response => res)
             .catch(this.handleError);
     }
 
