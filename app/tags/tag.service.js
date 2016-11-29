@@ -27,11 +27,27 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/Observable'], function(
             TagService = (function () {
                 function TagService(_http) {
                     this._http = _http;
-                    this._tagUrl = 'http://localhost:7000/devices';
+                    this._server = 'http://localhost:7000';
+                    this._devices = this._server + '/devices';
+                    this._deviceRegister = this._server + '/deviceRegister';
+                    this._deviceDelete = this._server + '/deviceDelete/';
                 }
                 TagService.prototype.getTags = function () {
-                    return this._http.get(this._tagUrl)
+                    return this._http.get(this._devices)
                         .map(function (response) { return response.json(); })
+                        .catch(this.handleError);
+                };
+                TagService.prototype.registerTag = function (tag) {
+                    var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
+                    var options = new http_1.RequestOptions({ headers: headers });
+                    var data = JSON.stringify(tag);
+                    return this._http.post(this._deviceRegister, data, options)
+                        .map(function (res) { return res.json(); })
+                        .catch(this.handleError);
+                };
+                TagService.prototype.deleteTag = function (id) {
+                    return this._http.delete(this._deviceDelete + id)
+                        .map(function (res) { return res.json(); })
                         .catch(this.handleError);
                 };
                 TagService.prototype.handleError = function (error) {

@@ -39,15 +39,15 @@ System.register(['angular2/core', 'angular2/common', 'angular2/router', './tag.s
                     this.tag = new tag_1.Tag();
                 }
                 TagRegisterComponent.prototype.doRegister = function (event) {
-                    console.log(this.tag);
+                    this._tagService.registerTag(this.tag)
+                        .subscribe(function (result) { return console.log(result); }, function (error) { return console.log(error); });
                     event.preventDefault();
                 };
                 TagRegisterComponent = __decorate([
                     core_1.Component({
                         selector: 'pm-register',
                         styleUrls: ['./app/tags/tag-register.component.css'],
-                        templateUrl: './app/tags/tag-register.component.html'
-                    }), 
+                        templateUrl: './app/tags/tag-register.component.html' }), 
                     __metadata('design:paramtypes', [tag_service_1.TagService, router_1.Router, common_1.FormBuilder])
                 ], TagRegisterComponent);
                 return TagRegisterComponent;

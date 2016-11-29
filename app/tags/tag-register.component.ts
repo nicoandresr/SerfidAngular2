@@ -22,7 +22,7 @@ export class TagRegisterComponent{
     public doRegister(event): void {
         this._tagService.registerTag(this.tag)
                 .subscribe(
-                    result => console.log(result)
+                    result => console.log(result),
                     error => console.log(error));
 
         event.preventDefault();
