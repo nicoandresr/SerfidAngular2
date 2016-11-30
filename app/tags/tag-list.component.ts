@@ -12,7 +12,6 @@ import { TagService } from './tag.service'
     directives: [StarComponent, ROUTER_DIRECTIVES],
     pipes: [ TagFilterPipe ]
 })
-
 export class TagListComponent implements OnInit {
     pageTitle: string = 'Device List';
     imageWidth: number = 50;

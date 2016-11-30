@@ -1,0 +1,57 @@
+<div class='panel panel-primary'>
+    <div class='panel-heading'>
+        {{pageTitle}}
+    </div>
+    <div class='panel-body'>
+        <div class='row'>
+            <div class="col-md-2">Filter by:</div>
+            <div class="col-md-2">
+                <input type="text"
+                    [(ngModel)]='listFilter'/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Filtered by: {{listFilter}}</h3>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table"
+                    *ngIf="readings && readings.length">
+                <thead>
+                    <tr>
+                        <th>
+                            <button class="btn btn-primary"
+                                (click)='toggleImage()'>
+                                {{showImage ? "Hide" : "Show"}} Image
+                            </button>
+                        </th>
+                        <th>Device</th>
+                        <th>Reading date</th>
+                        <th>Reader</th>
+                        <th>Tag</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='#reading of readings | readingFilter: listFilter'>
+                        <td>
+                            <img *ngIf='showImage'
+                                [src]="reading.deviceImageUrl" 
+                                [title]="reading.device | uppercase"
+                                [style.width.px]="imageWidth"
+                                [style.margin.px]="imageMargin">
+                        </td>
+                        <td>
+                            <a [routerLink]="['TagDetail', {id: reading.tagId}]">
+                                {{reading.device}}
+                            </a>
+                        </td>
+                        <td>{{reading.date | date:'shortDate'}}</td>
+                        <td>{{reading.reader | uppercase}}</td>
+                        <td>{{reading.tag | uppercase}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
