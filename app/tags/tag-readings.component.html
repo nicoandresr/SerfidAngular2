@@ -36,7 +36,7 @@
                     <tr *ngFor='#reading of readings | readingFilter: listFilter'>
                         <td>
                             <img *ngIf='showImage'
-                                [src]="reading.deviceImageUrl" 
+                                [src]="reading.imageUrl" 
                                 [title]="reading.device | uppercase"
                                 [style.width.px]="imageWidth"
                                 [style.margin.px]="imageMargin">
@@ -46,7 +46,7 @@
                                 {{reading.device}}
                             </a>
                         </td>
-                        <td>{{reading.date | date:'shortDate'}}</td>
+                        <td>{{reading.date }}</td>
                         <td>{{reading.reader | uppercase}}</td>
                         <td>{{reading.tag | uppercase}}</td>
                     </tr>
